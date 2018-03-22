@@ -1,0 +1,36 @@
+#To create graph plot of no of matches won by each team in all seasons of IPL
+#get the no of matches won by each time
+kkr_win<-which(match_data$winner=="KKR")
+csk_win<-which(match_data$winner=="CSK")
+rcb_win<-which(match_data$winner=="RCB")
+mi_win<-which(match_data$winner=="MI")
+rps_win<-which(match_data$winner=="RPS")
+srh_win<-which(match_data$winner=="SRH")
+kxi_win<-which(match_data$winner=="KXI")
+rr_win<-which(match_data$winner=="RR")
+dc_win<-which(match_data$winner=="DC")
+pw_win<-which(match_data$winner=="PW")
+ktk_win<-which(match_data$winner=="KTK")
+gl_win<-which(match_data$winner=="GL")
+dd_win<-which(match_data$winner=="DD")
+#store the length that is no of matches won
+matches_csk_win<-length(csk_win)
+ matches_mi_win<-length(mi_win)
+ matches_kkr_win<-length(match_kkr_win)
+ matches_dc_win<-length(dc_win)
+ matches_dd_win<-length(dd_win)
+ matches_rr_win<-length(rr_win)
+ matches_kxi_win<-length(kxi_win)
+ matches_ktk_win<-length(ktk_win)
+ matches_rcb_win<-length(rcb_win)
+matches_gl_win<-length(gl_win)
+matches_srh_win<-length(srh_win)
+ matches_pw_win<-length(pw_win)
+ matches_rps_win<-length(rps_win)
+#now using bar plot draw the graph
+#graph in bar plot is a vector with all the lengths of win by the team
+#teaam_names contain names of all the teams 
+colorr<-c("#ffd711","#2d2601","#024f70","#9b0401","#f26209","#c41f01","#0298fc","#1c1b1a","#ff0000","#7a039b","#7a039b","#fc7d07","#f71326")
+ barplot(graph,xlab="Teams",ylab = "matches",main="Matches won by team",names.arg = teaam_names,cex.names = 0.7,col = colorr)
+
+
